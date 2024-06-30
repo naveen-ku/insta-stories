@@ -8,8 +8,7 @@
 
     <include
         android:id="@+id/llHeader"
-        layout="@layout/header"
-        />
+        layout="@layout/header" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvUserStories"
@@ -22,5 +21,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/llHeader" />
 
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
