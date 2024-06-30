@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.instastories.data.db.entity.User
 import com.example.instastories.databinding.FragmentStoryPlayerBinding
 import com.example.instastories.util.UserListConverter
@@ -82,7 +83,7 @@ class StoryPlayerFragment : Fragment(), StoriesProgressView.StoriesListener {
     }
 
     fun addStoryData(url: String) {
-        Glide.with(requireContext()).load(url)
+        Glide.with(requireContext()).load(url).diskCacheStrategy(DiskCacheStrategy.RESOURCE)
             .into(binding.ivStoryImage);
     }
 }

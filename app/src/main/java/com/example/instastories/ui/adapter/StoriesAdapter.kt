@@ -11,6 +11,7 @@ import androidx.core.net.toUri
 import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.instastories.R
 import com.example.instastories.data.db.entity.Story
 import com.example.instastories.data.db.entity.User
@@ -43,7 +44,10 @@ class StoriesAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.userName.text = userData[position].username
-        Glide.with(context).load(userData[position].profileImageUrl).circleCrop()
+        Glide.with(context).load(userData[position].profileImageUrl)
+            .circleCrop().diskCacheStrategy(
+            DiskCacheStrategy.RESOURCE
+        )
             .into(holder.userImage);
         holder.itemView.setOnClickListener {
             onItemClick?.invoke(userData, position)
