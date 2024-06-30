@@ -21,7 +21,7 @@ class StoriesAdapter(
 ) :
     RecyclerView.Adapter<StoriesAdapter.ViewHolder>() {
 
-    var onItemClick: ((List<Story>) -> Unit)? = null
+    var onItemClick: ((List<User>, position: Int) -> Unit)? = null
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var userName: TextView
@@ -46,7 +46,7 @@ class StoriesAdapter(
         Glide.with(context).load(userData[position].profileImageUrl).circleCrop()
             .into(holder.userImage);
         holder.itemView.setOnClickListener {
-            onItemClick?.invoke(userData[position].stories)
+            onItemClick?.invoke(userData, position)
         }
     }
 

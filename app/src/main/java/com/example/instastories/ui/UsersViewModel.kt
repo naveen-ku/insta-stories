@@ -16,7 +16,8 @@ class UsersViewModel: ViewModel() {
     fun getUsers() {
         viewModelScope.launch {
             try {
-                userData.value = UserRepository().getUsers();
+                userData.postValue(UserRepository().getUsers())
+//                userData.value = UserRepository().getUsers();
                 Log.d("Ninja", "ViewModel getUsers() success")
             } catch (error: Exception){
                 Log.d("Ninja","ViewModel getUsers() exception ${error}")
