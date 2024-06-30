@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val recyclerView :RecyclerView = findViewById(R.id.rvUserStories);
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
 
         userViewModel = ViewModelProvider(this).get(UsersViewModel::class.java)
         Log.d("Ninja MainActivity ",userViewModel.getUsers().toString())
