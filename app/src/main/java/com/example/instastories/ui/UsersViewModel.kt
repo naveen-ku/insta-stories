@@ -1,5 +1,6 @@
 package com.example.instastories.ui
 
+import android.net.http.NetworkException
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -14,8 +15,12 @@ class UsersViewModel: ViewModel() {
 
     fun getUsers() {
         viewModelScope.launch {
-            userData.value = UserRepository().getUsers();
-            Log.d("Ninja ViewModel", userData.toString());
+            try {
+                userData.value = UserRepository().getUsers();
+                Log.d("Ninja ViewModel", userData.toString());
+            } catch (error: Exception) {
+                Log.d("Ninja ViewModel getUsers() exception", error.message.toString());
+            }
         }
     }
 }
