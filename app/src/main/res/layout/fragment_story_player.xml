@@ -57,17 +57,16 @@
         <FrameLayout
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:background="@drawable/bg_round_gradient">
+            android:layout_gravity="center">
 
             <ImageView
                 android:id="@+id/ivUserImage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="4dp"
                 android:background="@drawable/bg_round"
                 android:padding="4dp"
-                android:src="@drawable/instagram_text_logo" />
+                android:src="@drawable/instagram_text_logo"
+                android:contentDescription="TODO" />
         </FrameLayout>
 
         <LinearLayout

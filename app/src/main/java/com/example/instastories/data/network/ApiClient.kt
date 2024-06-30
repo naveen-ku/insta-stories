@@ -10,8 +10,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
     private var retrofit: Retrofit? = null
+    private const val BASE_URL = "https://us-central1-insta-stories-firebase.cloudfunctions.net/app/"
 
-    fun hasNetwork(context: Context): Boolean? {
+    private fun hasNetwork(context: Context): Boolean? {
         var isConnected: Boolean? = false // Initial Value
         val connectivityManager =
             context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
@@ -21,12 +22,13 @@ object RetrofitClient {
         return isConnected
     }
 
+    /** Get Retrofit client to send API request to API Services*/
     fun getClient(context: Context): Retrofit {
         if (retrofit == null) {
-            // Set up cache
+            // Set up network request cache
             val cacheSize = 10 * 1024 * 1024 // 10 MB
-            val cache = Cache(context.getCacheDir(), cacheSize.toLong())
-
+            val cache = Cache(context.cacheDir, cacheSize.toLong())
+            // If there is no Internet, get the cache that was stored 7 days ago
             val okHttpClient = OkHttpClient.Builder()
                 .cache(cache)
                 .addInterceptor { chain ->
@@ -45,7 +47,7 @@ object RetrofitClient {
 
             // Build Retrofit instance
             retrofit = Retrofit.Builder()
-                .baseUrl("https://us-central1-insta-stories-firebase.cloudfunctions.net/app/")
+                .baseUrl(BASE_URL)
                 .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()

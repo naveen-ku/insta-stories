@@ -5,20 +5,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.instastories.databinding.FragmentUserStoryBinding
+import com.example.instastories.databinding.FragmentStoryContainerBinding
 import com.example.instastories.ui.adapter.UserStoriesAdapter
 import com.example.instastories.util.UserListConverter
 
 class StoryContainerFragment : Fragment() {
 
-    private var _binding: FragmentUserStoryBinding? = null
+    private var _binding: FragmentStoryContainerBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        _binding = FragmentUserStoryBinding.inflate(inflater, container, false)
+        _binding = FragmentStoryContainerBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -32,6 +32,8 @@ class StoryContainerFragment : Fragment() {
             requireFragmentManager(),
             lifecycle
         )
+        // Apply animation to scrolling
+        // open correct position story on user item click
         binding.apply {
             vpUserStory.adapter = userStoryAdapter
             vpUserStory.offscreenPageLimit = 1

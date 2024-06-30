@@ -14,23 +14,27 @@ import com.example.instastories.util.UserListConverter
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var userViewModel: UsersViewModel
+    private lateinit var userViewModel: UsersViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val recyclerView: RecyclerView = findViewById(R.id.rvUserStories);
+        // Initialise recycler view to show all users with stories
+        val recyclerView: RecyclerView = findViewById(R.id.rvUserStories)
         recyclerView.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
-        userViewModel = ViewModelProvider(this).get(UsersViewModel::class.java)
+        // Initialize view-model to store the data related to MainActivity
+        userViewModel = ViewModelProvider(this)[UsersViewModel::class.java]
+
+        // API call -> Get all users
         userViewModel.getUsers()
         userViewModel.userData.observe(this) {
             val customAdapter = StoriesAdapter(this, it)
             recyclerView.adapter = customAdapter
             customAdapter.onItemClick = { users: List<User>, pos: Int ->
                 val userData = UserListConverter.fromStoryList(users)
-                val fragment = StoryContainerFragment.newInstance(userData, pos);
+                val fragment = StoryContainerFragment.newInstance(userData, pos)
                 supportFragmentManager.beginTransaction()
                     .add(R.id.fragment_container, fragment).setReorderingAllowed(true)
                     .addToBackStack(null)

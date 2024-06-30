@@ -17,11 +17,11 @@ class UsersViewModel(application: Application) : AndroidViewModel(application) {
     fun getUsers() {
         viewModelScope.launch {
             try {
+                // Inform the observer about data fetched successfully
                 userData.postValue(UserRepository(context).getUsers())
-//                userData.value = UserRepository().getUsers();
                 Log.d("Ninja", "ViewModel getUsers() success")
             } catch (error: Exception){
-                Log.d("Ninja","ViewModel getUsers() exception ${error}")
+                Log.d("Ninja","ViewModel getUsers() exception $error")
             }
 
         }

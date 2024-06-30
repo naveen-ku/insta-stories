@@ -1,6 +1,5 @@
 package com.example.instastories.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -23,16 +22,11 @@ class StoryPlayerFragment : Fragment(), StoriesProgressView.StoriesListener {
     private lateinit var userData: User
     private lateinit var storiesProgressView: StoriesProgressView
     private var counter = 0
-    var pressTime = 0L
-    var limit = 500L
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentStoryPlayerBinding.inflate(inflater, container, false)
 
@@ -40,16 +34,16 @@ class StoryPlayerFragment : Fragment(), StoriesProgressView.StoriesListener {
         Log.d("Ninja StoryPlayerFragment", userData.toString())
         storiesProgressView = binding.stories
         storiesProgressView.setStoriesCount(userData.stories.size)
-        storiesProgressView.setStoryDuration(5000L);
-        storiesProgressView.setStoriesListener(this);
+        storiesProgressView.setStoryDuration(5000L)
+        storiesProgressView.setStoriesListener(this)
         // below line is use to start stories progress bar.
-        storiesProgressView.startStories(counter);
+        storiesProgressView.startStories(counter)
 
         binding.vReverse.setOnClickListener { storiesProgressView.reverse() }
         binding.vSkip.setOnClickListener { storiesProgressView.skip() }
 
         Glide.with(requireContext()).load(userData.profileImageUrl).circleCrop()
-            .into(binding.ivUserImage);
+            .into(binding.ivUserImage)
         binding.tvStoryUserName.text = userData.username
 
         addStoryData(userData.stories[counter].imageUrl)
@@ -62,9 +56,9 @@ class StoryPlayerFragment : Fragment(), StoriesProgressView.StoriesListener {
         fun newInstance(user: String): StoryPlayerFragment {
             val fragment = StoryPlayerFragment()
             val bundle = Bundle()
-            bundle.putString("USER", user)
+            bundle.putString(USER, user)
             fragment.arguments = bundle
-            return fragment;
+            return fragment
         }
     }
 
@@ -74,7 +68,7 @@ class StoryPlayerFragment : Fragment(), StoriesProgressView.StoriesListener {
     }
 
     override fun onPrev() {
-        if ((counter - 1) < 0) return;
+        if ((counter - 1) < 0) return
         addStoryData(userData.stories[--counter].imageUrl)
     }
 
@@ -82,8 +76,8 @@ class StoryPlayerFragment : Fragment(), StoriesProgressView.StoriesListener {
         activity?.onBackPressed()
     }
 
-    fun addStoryData(url: String) {
+    private fun addStoryData(url: String) {
         Glide.with(requireContext()).load(url).diskCacheStrategy(DiskCacheStrategy.RESOURCE)
-            .into(binding.ivStoryImage);
+            .into(binding.ivStoryImage)
     }
 }

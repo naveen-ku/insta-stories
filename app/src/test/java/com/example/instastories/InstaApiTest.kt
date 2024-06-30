@@ -11,8 +11,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class InstaApiTest {
 
-    lateinit var mockWebServer: MockWebServer
-    lateinit var instaApiService: InstaApiService
+    private lateinit var mockWebServer: MockWebServer
+    private lateinit var instaApiService: InstaApiService
 
     @Before
     fun setup() {

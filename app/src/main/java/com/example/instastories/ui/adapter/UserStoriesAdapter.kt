@@ -9,16 +9,19 @@ import com.example.instastories.ui.StoryPlayerFragment
 import com.example.instastories.util.UserListConverter
 
 class UserStoriesAdapter(
-    private val UserList: List<User>,
+    private val userList: List<User>,
     fragmentManager: FragmentManager,
     lifecycle: Lifecycle
 ) :
     FragmentStateAdapter(fragmentManager, lifecycle) {
-    override fun getItemCount(): Int =
-        UserList.size
 
+    // Returns the size of total users having stories
+    override fun getItemCount(): Int =
+        userList.size
+
+    // Each StoryPlayerFragment will show all the stories related to particular user
     override fun createFragment(position: Int): Fragment {
-        val user = UserListConverter.fromStory(UserList[position])
+        val user = UserListConverter.fromStory(userList[position])
         return StoryPlayerFragment.newInstance(user)
     }
 }
