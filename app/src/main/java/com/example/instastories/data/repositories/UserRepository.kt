@@ -7,9 +7,9 @@ import com.example.instastories.data.network.InstaApi
 class UserRepository {
 
     suspend fun getUsers(): List<User> {
-        val users = InstaApi().getUsers();
-        Log.d("Ninja", users.toString());
-        return users;
+        val userData = InstaApi.retrofitService.getUsers()
+        Log.d("Ninja", userData.toString());
+        return userData.users;
     }
 
 }

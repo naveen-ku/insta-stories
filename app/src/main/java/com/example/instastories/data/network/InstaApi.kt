@@ -5,22 +5,12 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 
-interface InstaApi {
-    @GET("api/getUsers")
-    suspend fun getUsers(): List<User>
-    companion object {
-        operator fun invoke(): InstaApi {
-            return Retrofit.Builder()
-                .baseUrl("https://us-central1-insta-stories-firebase.cloudfunctions.net/app/")
-                .addConverterFactory(GsonConverterFactory.create()).build()
-                .create(InstaApi::class.java)
-        }
+private val retrofit = Retrofit.Builder()
+    .baseUrl("https://us-central1-insta-stories-firebase.cloudfunctions.net/app/")
+    .addConverterFactory(GsonConverterFactory.create()).build()
 
+object InstaApi {
+    val retrofitService : InstaApiService by lazy {
+        retrofit.create(InstaApiService::class.java)
     }
-
-}
-
-interface InstaApiService {
-
-
 }
