@@ -1,4 +1,4 @@
-package com.example.instastories.ui
+package com.example.instastories.ui.viewmodel
 
 import android.app.Application
 import android.util.Log

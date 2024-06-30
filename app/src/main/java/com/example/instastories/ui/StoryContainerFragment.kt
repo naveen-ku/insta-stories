@@ -6,22 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.instastories.databinding.FragmentUserStoryBinding
-import com.example.instastories.ui.adapter.UserStoryPagerAdapter
+import com.example.instastories.ui.adapter.UserStoriesAdapter
 import com.example.instastories.util.UserListConverter
 
-class UserStoryFragment : Fragment() {
+class StoryContainerFragment : Fragment() {
 
     private var _binding: FragmentUserStoryBinding? = null
     private val binding get() = _binding!!
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentUserStoryBinding.inflate(inflater, container, false)
         return binding.root
@@ -32,12 +27,12 @@ class UserStoryFragment : Fragment() {
         val userData = arguments?.getString("USERS")
         val pos = arguments?.getInt("POSITION")
 
-        val userStoryAdapter = UserStoryPagerAdapter(
+        val userStoryAdapter = UserStoriesAdapter(
             UserListConverter.toStoryList(userData!!),
             requireFragmentManager(),
             lifecycle
         )
-        binding.apply{
+        binding.apply {
             vpUserStory.adapter = userStoryAdapter
             vpUserStory.offscreenPageLimit = 1
             vpUserStory.setPageTransformer { page, position ->
@@ -45,14 +40,14 @@ class UserStoryFragment : Fragment() {
                 page.pivotY = page.height.toFloat()
                 page.rotation = -15.0f * position * -1.25f
             }
-            pos?.let { vpUserStory.setCurrentItem(it,false) }
+            pos?.let { vpUserStory.setCurrentItem(it, false) }
         }
 
     }
 
     companion object {
-        fun newInstance(userList: String, pos: Int): UserStoryFragment {
-            val fragment = UserStoryFragment()
+        fun newInstance(userList: String, pos: Int): StoryContainerFragment {
+            val fragment = StoryContainerFragment()
             val bundle = Bundle()
             bundle.putString("USERS", userList)
             bundle.putInt("POSITION", pos)

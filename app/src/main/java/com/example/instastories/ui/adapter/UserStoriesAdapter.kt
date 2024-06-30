@@ -8,7 +8,7 @@ import com.example.instastories.data.db.entity.User
 import com.example.instastories.ui.StoryPlayerFragment
 import com.example.instastories.util.UserListConverter
 
-class UserStoryPagerAdapter(
+class UserStoriesAdapter(
     private val UserList: List<User>,
     fragmentManager: FragmentManager,
     lifecycle: Lifecycle
