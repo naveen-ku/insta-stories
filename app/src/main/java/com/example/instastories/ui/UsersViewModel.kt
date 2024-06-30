@@ -17,10 +17,11 @@ class UsersViewModel: ViewModel() {
         viewModelScope.launch {
             try {
                 userData.value = UserRepository().getUsers();
-                Log.d("Ninja ViewModel", userData.toString());
-            } catch (error: Exception) {
-                Log.d("Ninja ViewModel getUsers() exception", error.message.toString());
+                Log.d("Ninja", "ViewModel getUsers() success")
+            } catch (error: Exception){
+                Log.d("Ninja","ViewModel getUsers() exception ${error}")
             }
+
         }
     }
 }

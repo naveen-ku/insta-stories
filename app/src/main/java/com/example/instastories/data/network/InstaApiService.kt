@@ -5,5 +5,5 @@ import retrofit2.http.GET
 
 interface InstaApiService {
     @GET("api/getUsers")
-    suspend fun getUsers(): UserDataResponse
+    suspend fun getUsers(): List<User>
 }
