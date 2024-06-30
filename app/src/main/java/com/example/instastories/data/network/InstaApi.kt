@@ -8,18 +8,6 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-
-//private val retrofit = Retrofit.Builder()
-//    .baseUrl("https://us-central1-insta-stories-firebase.cloudfunctions.net/app/")
-//    .addConverterFactory(GsonConverterFactory.create()).build()
-//
-//object InstaApi {
-//    val retrofitService: InstaApiService by lazy {
-//        retrofit.create(InstaApiService::class.java)
-//    }
-//}
-
-
 object RetrofitClient {
     private var retrofit: Retrofit? = null
 
@@ -44,7 +32,8 @@ object RetrofitClient {
                 .addInterceptor { chain ->
                     var request = chain.request()
                     request = if (hasNetwork(context)!!)
-                        request.newBuilder().header("Cache-Control", "public, max-age=" + 60).build()
+                        request.newBuilder().header("Cache-Control", "public, max-age=" + 60)
+                            .build()
                     else
                         request.newBuilder().header(
                             "Cache-Control",
