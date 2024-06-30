@@ -1,6 +1,7 @@
 package com.example.instastories.ui.adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,15 +12,21 @@ import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.instastories.R
+import com.example.instastories.data.db.entity.Story
 import com.example.instastories.data.db.entity.User
 
-class StoriesAdapter(val context: Context, val userData: List<User>) :
+class StoriesAdapter(
+    private val context: Context,
+    private val userData: List<User>,
+) :
     RecyclerView.Adapter<StoriesAdapter.ViewHolder>() {
 
+    var onItemClick: ((List<Story>) -> Unit)? = null
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var userName: TextView
         val userImage: ImageView
+
         init {
             userName = view.findViewById(R.id.tvUserName)
             userImage = view.findViewById(R.id.ivUserImage)
@@ -36,7 +43,11 @@ class StoriesAdapter(val context: Context, val userData: List<User>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.userName.text = userData[position].username
-        Glide.with(context).load(userData[position].profileImageUrl).circleCrop().into(holder.userImage);
+        Glide.with(context).load(userData[position].profileImageUrl).circleCrop()
+            .into(holder.userImage);
+        holder.itemView.setOnClickListener {
+            onItemClick?.invoke(userData[position].stories)
+        }
     }
 
 }

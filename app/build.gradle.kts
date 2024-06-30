@@ -69,7 +69,6 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
     //Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
-
-
+    implementation("com.github.shts:StoriesProgressView:3.0.0")
 
 }
