@@ -37,7 +37,17 @@ class UserStoryFragment : Fragment() {
             requireFragmentManager(),
             lifecycle
         )
-        binding.vpUserStory.adapter = userStoryAdapter
+        binding.apply{
+            vpUserStory.adapter = userStoryAdapter
+            vpUserStory.offscreenPageLimit = 1
+            vpUserStory.setPageTransformer { page, position ->
+                page.pivotX = page.width.toFloat() * 0.5f
+                page.pivotY = page.height.toFloat()
+                page.rotation = -15.0f * position * -1.25f
+            }
+            pos?.let { vpUserStory.setCurrentItem(it,false) }
+        }
+
     }
 
     companion object {
