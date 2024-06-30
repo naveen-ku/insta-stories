@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.instastories.R
 import com.example.instastories.data.db.entity.User
+import com.example.instastories.databinding.ActivityMainBinding
 import com.example.instastories.ui.adapter.StoriesAdapter
 import com.example.instastories.util.UserListConverter
 
@@ -14,7 +15,6 @@ import com.example.instastories.util.UserListConverter
 class MainActivity : AppCompatActivity() {
 
     lateinit var userViewModel: UsersViewModel
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -30,9 +30,10 @@ class MainActivity : AppCompatActivity() {
             recyclerView.adapter = customAdapter
             customAdapter.onItemClick = { users: List<User>, pos: Int ->
                 val userData = UserListConverter.fromStoryList(users)
-                val fragment = UserStoryFragment.newInstance(userData,pos);
+                val fragment = UserStoryFragment.newInstance(userData, pos);
                 supportFragmentManager.beginTransaction()
-                    .add(R.id.fragment_container, fragment)
+                    .add(R.id.fragment_container, fragment).setReorderingAllowed(true)
+                    .addToBackStack(null)
                     .commit()
             }
         }
