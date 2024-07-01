@@ -19,7 +19,10 @@ class MainActivityEspressoTest {
     @Test
     fun testItemClickOpensFragment() {
         // Launch MainActivity
-        val activityScenario = ActivityScenario.launch(MainActivity::class.java)
+        ActivityScenario.launch(MainActivity::class.java)
+        // Wait for some time to get fetched data
+        Thread.sleep(5000)
+        // On click of recycler view item, open story fragment container
         onView(withId(R.id.rvUserStories))
             .perform(actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()))
 

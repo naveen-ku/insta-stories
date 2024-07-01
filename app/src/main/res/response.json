@@ -1,0 +1,449 @@
+[
+  {
+    "id": "1",
+    "username": "naveen-ku",
+    "profileImageUrl": "https://picsum.photos/id/90/200/300",
+    "stories": [
+      {
+        "createdAt": "1719660687333",
+        "imageUrl": "https://picsum.photos/id/6/200/300",
+        "id": "0",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687351",
+        "imageUrl": "https://picsum.photos/id/9/200/300",
+        "id": "1",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687356",
+        "imageUrl": "https://picsum.photos/id/27/200/300",
+        "id": "2",
+        "seen": false
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "username": "aayustorm",
+    "profileImageUrl": "https://picsum.photos/id/54/200/300",
+    "stories": [
+      {
+        "createdAt": "1719660687393",
+        "imageUrl": "https://picsum.photos/id/14/200/300",
+        "id": "0",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687319",
+        "imageUrl": "https://picsum.photos/id/26/200/300",
+        "id": "1",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687311",
+        "imageUrl": "https://picsum.photos/id/27/200/300",
+        "id": "2",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687321",
+        "imageUrl": "https://picsum.photos/id/22/200/300",
+        "id": "3",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687345",
+        "imageUrl": "https://picsum.photos/id/96/200/300",
+        "id": "4",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687340",
+        "imageUrl": "https://picsum.photos/id/38/200/300",
+        "id": "5",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687356",
+        "imageUrl": "https://picsum.photos/id/11/200/300",
+        "id": "6",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687366",
+        "imageUrl": "https://picsum.photos/id/50/200/300",
+        "id": "7",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687357",
+        "imageUrl": "https://picsum.photos/id/34/200/300",
+        "id": "8",
+        "seen": false
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "username": "zeus_bhanu",
+    "profileImageUrl": "https://picsum.photos/id/57/200/300",
+    "stories": [
+      {
+        "createdAt": "1719660687370",
+        "imageUrl": "https://picsum.photos/id/90/200/300",
+        "id": "0",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687373",
+        "imageUrl": "https://picsum.photos/id/92/200/300",
+        "id": "1",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687313",
+        "imageUrl": "https://picsum.photos/id/76/200/300",
+        "id": "2",
+        "seen": false
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "username": "stage",
+    "profileImageUrl": "https://picsum.photos/id/19/200/300",
+    "stories": [
+      {
+        "createdAt": "1719660687376",
+        "imageUrl": "https://picsum.photos/id/99/200/300",
+        "id": "0",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687359",
+        "imageUrl": "https://picsum.photos/id/21/200/300",
+        "id": "1",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687355",
+        "imageUrl": "https://picsum.photos/id/29/200/300",
+        "id": "2",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687316",
+        "imageUrl": "https://picsum.photos/id/27/200/300",
+        "id": "3",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687315",
+        "imageUrl": "https://picsum.photos/id/51/200/300",
+        "id": "4",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687339",
+        "imageUrl": "https://picsum.photos/id/17/200/300",
+        "id": "5",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687314",
+        "imageUrl": "https://picsum.photos/id/90/200/300",
+        "id": "6",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687362",
+        "imageUrl": "https://picsum.photos/id/70/200/300",
+        "id": "7",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687377",
+        "imageUrl": "https://picsum.photos/id/67/200/300",
+        "id": "8",
+        "seen": false
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "username": "prateek_k",
+    "profileImageUrl": "https://picsum.photos/id/82/200/300",
+    "stories": [
+      {
+        "createdAt": "1719660687335",
+        "imageUrl": "https://picsum.photos/id/17/200/300",
+        "id": "0",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687388",
+        "imageUrl": "https://picsum.photos/id/44/200/300",
+        "id": "1",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687317",
+        "imageUrl": "https://picsum.photos/id/1/200/300",
+        "id": "2",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687325",
+        "imageUrl": "https://picsum.photos/id/56/200/300",
+        "id": "3",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687324",
+        "imageUrl": "https://picsum.photos/id/52/200/300",
+        "id": "4",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687301",
+        "imageUrl": "https://picsum.photos/id/56/200/300",
+        "id": "5",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687377",
+        "imageUrl": "https://picsum.photos/id/68/200/300",
+        "id": "6",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687300",
+        "imageUrl": "https://picsum.photos/id/33/200/300",
+        "id": "7",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687332",
+        "imageUrl": "https://picsum.photos/id/95/200/300",
+        "id": "8",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687345",
+        "imageUrl": "https://picsum.photos/id/19/200/300",
+        "id": "9",
+        "seen": false
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "username": "saaarthak",
+    "profileImageUrl": "https://picsum.photos/id/5/200/300",
+    "stories": [
+      {
+        "createdAt": "1719660687319",
+        "imageUrl": "https://picsum.photos/id/0/200/300",
+        "id": "0",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687312",
+        "imageUrl": "https://picsum.photos/id/20/200/300",
+        "id": "1",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687358",
+        "imageUrl": "https://picsum.photos/id/47/200/300",
+        "id": "2",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687306",
+        "imageUrl": "https://picsum.photos/id/39/200/300",
+        "id": "3",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687345",
+        "imageUrl": "https://picsum.photos/id/13/200/300",
+        "id": "4",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687376",
+        "imageUrl": "https://picsum.photos/id/9/200/300",
+        "id": "5",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687351",
+        "imageUrl": "https://picsum.photos/id/1/200/300",
+        "id": "6",
+        "seen": false
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "username": "explorer",
+    "profileImageUrl": "https://picsum.photos/id/35/200/300",
+    "stories": [
+      {
+        "createdAt": "1719660687379",
+        "imageUrl": "https://picsum.photos/id/33/200/300",
+        "id": "0",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687353",
+        "imageUrl": "https://picsum.photos/id/5/200/300",
+        "id": "1",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687313",
+        "imageUrl": "https://picsum.photos/id/14/200/300",
+        "id": "2",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687322",
+        "imageUrl": "https://picsum.photos/id/52/200/300",
+        "id": "3",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687383",
+        "imageUrl": "https://picsum.photos/id/22/200/300",
+        "id": "4",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687304",
+        "imageUrl": "https://picsum.photos/id/16/200/300",
+        "id": "5",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687373",
+        "imageUrl": "https://picsum.photos/id/76/200/300",
+        "id": "6",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687305",
+        "imageUrl": "https://picsum.photos/id/82/200/300",
+        "id": "7",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687367",
+        "imageUrl": "https://picsum.photos/id/89/200/300",
+        "id": "8",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687398",
+        "imageUrl": "https://picsum.photos/id/82/200/300",
+        "id": "9",
+        "seen": false
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "username": "abhishek.s",
+    "profileImageUrl": "https://picsum.photos/id/25/200/300",
+    "stories": [
+      {
+        "createdAt": "1719660687387",
+        "imageUrl": "https://picsum.photos/id/35/200/300",
+        "id": "0",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687340",
+        "imageUrl": "https://picsum.photos/id/29/200/300",
+        "id": "1",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687361",
+        "imageUrl": "https://picsum.photos/id/36/200/300",
+        "id": "2",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687389",
+        "imageUrl": "https://picsum.photos/id/6/200/300",
+        "id": "3",
+        "seen": false
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "username": "satish.u",
+    "profileImageUrl": "https://picsum.photos/id/74/200/300",
+    "stories": [
+      {
+        "createdAt": "1719660687388",
+        "imageUrl": "https://picsum.photos/id/99/200/300",
+        "id": "0",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687353",
+        "imageUrl": "https://picsum.photos/id/98/200/300",
+        "id": "1",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687356",
+        "imageUrl": "https://picsum.photos/id/14/200/300",
+        "id": "2",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687393",
+        "imageUrl": "https://picsum.photos/id/85/200/300",
+        "id": "3",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687307",
+        "imageUrl": "https://picsum.photos/id/42/200/300",
+        "id": "4",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687354",
+        "imageUrl": "https://picsum.photos/id/56/200/300",
+        "id": "5",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687306",
+        "imageUrl": "https://picsum.photos/id/95/200/300",
+        "id": "6",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687394",
+        "imageUrl": "https://picsum.photos/id/30/200/300",
+        "id": "7",
+        "seen": false
+      },
+      {
+        "createdAt": "1719660687387",
+        "imageUrl": "https://picsum.photos/id/55/200/300",
+        "id": "8",
+        "seen": false
+      }
+    ]
+  }
+]
