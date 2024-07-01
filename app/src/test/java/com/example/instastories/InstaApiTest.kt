@@ -6,6 +6,7 @@ import okhttp3.mockwebserver.MockWebServer
 import org.junit.After
 import org.junit.Assert
 import org.junit.Before
+import org.junit.Test
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -22,7 +23,7 @@ class InstaApiTest {
             .create(InstaApiService::class.java)
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     suspend fun testGetUsers() {
         val mockResponse = MockResponse()
         mockResponse.setBody("[]")

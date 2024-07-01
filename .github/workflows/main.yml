@@ -50,3 +50,36 @@ jobs:
         with:
           name: unit_test_report
           path: app/build/reports/tests/testDebugUnitTest/
+  android-integration-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: "temurin"
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          api-level: 30
+          target: default
+          arch: x86
+          emulator-build: 6696227
+          ndk-version: 21.3.6528147
+
+      - name: Start emulator
+        run: |
+          adb start-server
+          echo "no" | avdmanager create avd -n test -k "system-images;android-30;default;x86"
+          $ANDROID_HOME/emulator/emulator-headless -avd test -no-snapshot-save -noaudio -no-boot-anim -no-window &
+          adb wait-for-device
+          adb shell settings put global window_animation_scale 0
+          adb shell settings put global transition_animation_scale 0
+          adb shell settings put global animator_duration_scale 0
+
+      - name: Run tests
+        run: ./gradlew connectedAndroidTest
