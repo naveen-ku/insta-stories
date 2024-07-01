@@ -40,6 +40,7 @@ https://github.com/naveen-ku/insta-stories/assets/44813618/32f2fc77-2877-4ea0-a5
 
 #### CI/CD Pipeline
 - Check for lint errors and publish report as artifact that will analyze code for potential errors. Using linting maintained the code quality and consistency by identifying and fixing issues early in the development process.
+- Added android emulator CI pipeline to test UI click operation  
 
 
 ### Running the project
