@@ -23,7 +23,7 @@ class InstaApiTest {
             .create(InstaApiService::class.java)
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     suspend fun testGetUsers() {
         val mockResponse = MockResponse()
         mockResponse.setBody("[]")
