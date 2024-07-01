@@ -74,3 +74,4 @@ jobs:
           api-level: 29
           script: ./gradlew connectedAndroidTest
           disable-animations: true
+
